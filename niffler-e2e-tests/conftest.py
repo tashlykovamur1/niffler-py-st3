@@ -7,6 +7,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+from tests.niffler import Niffler
+from urls_data import REGISTER_URL
 
 faker = Faker()
 
@@ -58,10 +60,10 @@ def register_user():
 
 @pytest.fixture(scope="function")
 def pages(driver):
-    base = BaseTest()
-    base.driver = driver
-    base.setup_method()
-    yield base
+    niffler = Niffler()
+    niffler.driver = driver
+    niffler.setup_method()
+    yield niffler
 
 
 @pytest.fixture(scope="function")
