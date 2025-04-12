@@ -1,0 +1,7 @@
+FRONTEND_AUTH_URL = 'http://auth.niffler.dc:9000'
+FRONTEND_URL = 'http://frontend.niffler.dc'
+REGISTER_URL = f'{FRONTEND_AUTH_URL}/register'
+LOGIN_URL = f'{FRONTEND_AUTH_URL}/login'
+GATEWAY_URL = 'http://gateway.niffler.dc:8090'
+MAIN_URL = f'{FRONTEND_URL}/main'
+FRIENDS_URL = f'{FRONTEND_URL}/people/friends'
